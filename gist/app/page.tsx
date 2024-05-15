@@ -1,3 +1,6 @@
-export default function Page() {
-  return <h1>Hello, Next.js!</h1>
+import * as React from 'react';
+import Button from '@mui/material/Button';
+
+export default function ButtonUsage() {
+  return <Button variant="contained">Hello world</Button>;
 }

@@ -13,7 +13,7 @@ import Sidebar from '../app/ui/Sidebar';
 import Footer from '../app/ui/Footer';
 import posts from '../data/post';
 import PostCard from './ui/Postcard';
-
+// TODO: CLEAN UP PAGE.
 const sections = [
   { title: 'Technology', url: '#' },
   { title: 'Design', url: '#' },
@@ -54,7 +54,6 @@ const featuredPosts = [
     imageLabel: 'Image Text',
   },
 ];
-
 
 
 const sidebar = {

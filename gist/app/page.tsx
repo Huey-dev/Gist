@@ -81,7 +81,7 @@ const sidebar = {
   ],
 };
 
-export default function Blog() {
+export default function Page() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

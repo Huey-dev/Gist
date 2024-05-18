@@ -7,6 +7,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import theme from './theme';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Main from '../app/component/Main';
 import MainFeaturedPost from '../app/ui/MainFeaturedPost';
 import FeaturedPost from '../app/ui/FeaturedPost';
 import Sidebar from '../app/ui/Sidebar';
@@ -84,7 +85,7 @@ export default function Blog() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg p-4">
+      <Container maxWidth="lg" sx={{ p: 4 }}>
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
@@ -93,18 +94,18 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            {posts.map((post) => (
-              <PostCard key={post.title} post={post} />
-            ))}
-          </Grid>
-          <Grid container item xs={12} md={4} sx={{ mt: 3 }}>
+          
+              <Main title="From the firehose" posts={posts} />
+            
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
               social={sidebar.social}
-            />
-          </Grid>
+              />
+        
+              </Grid>
+              
         </main>
       </Container>
       <Footer
